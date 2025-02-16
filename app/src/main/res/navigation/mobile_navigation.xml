@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/Home">
+
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.threedev.appconvertor.ui.fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_Home_to_Scanned"
+            app:destination="@id/Rewards" />
+        <action
+            android:id="@+id/action_Home_to_Convert"
+            app:destination="@id/Convert" />
+        <action
+            android:id="@+id/action_Home_to_get_started"
+            app:destination="@id/get_started" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Rewards"
+        android:name="com.threedev.appconvertor.ui.fragments.reward.RewardFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_reward" />
+
+    <fragment
+        android:id="@+id/Convert"
+        android:name="com.threedev.appconvertor.ui.fragments.convertapp.ConvertAppFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_convertapp" />
+
+    <fragment
+        android:id="@+id/Setting"
+        android:name="com.threedev.appconvertor.ui.fragments.SettingFragment"
+        android:label="@string/menu_labels"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_Labels_to_Scanned"
+            app:destination="@id/Rewards" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.threedev.appconvertor.ui.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+    <fragment
+        android:id="@+id/get_started"
+        android:name="com.threedev.appconvertor.ui.fragments.getStarted.GetStartedFragment"
+        android:label="Get Started"
+        tools:layout="@layout/fragment_get_started" >
+        <argument
+            android:name="builderInfo"
+            app:argType="com.threedev.appconvertor.data.models.WebBuilderApkInfo" />
+    </fragment>
+
+</navigation>

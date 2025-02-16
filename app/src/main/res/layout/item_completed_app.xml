@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_goneMarginBottom="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <!-- Inner ConstraintLayout for Content -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <!-- App Icon -->
+            <ImageView
+                android:id="@+id/iv_appicone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logout_icone"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:contentDescription="@string/app_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_appname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_status"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@id/iv_appicone"
+                app:layout_constraintTop_toTopOf="@id/iv_appicone"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Package Name -->
+            <TextView
+                android:id="@+id/tv_status_package"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/app_staus_package"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_appicone"
+                app:layout_constraintTop_toBottomOf="@id/tv_appname"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Time Left -->
+            <TextView
+                android:id="@+id/tvTimeLeft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Time Left"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="#FF0000"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@id/iv_appicone"
+                app:layout_constraintTop_toBottomOf="@id/tv_status_package"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <!-- Get APK Button -->
+            <Button
+                android:id="@+id/btnGetApk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Get APK"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnBundle"
+                app:layout_constraintTop_toBottomOf="@id/tvTimeLeft"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/_15sdp"
+
+                android:layout_marginEnd="@dimen/_15sdp"/>
+
+            <!-- Bundle Button -->
+            <Button
+                android:id="@+id/btnBundle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Get Bundle"
+                app:layout_constraintStart_toEndOf="@id/btnGetApk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTimeLeft"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

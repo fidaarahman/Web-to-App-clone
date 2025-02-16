@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile_icone"
+        android:title="@string/profile" />
+
+    <item
+        android:id="@+id/nav_create_app"
+        android:icon="@drawable/create_icone"
+        android:title="@string/create_app" />
+
+    <item
+        android:id="@+id/nav_status"
+        android:icon="@drawable/status_icone"
+        android:title="@string/status"
+        android:visible="false"
+        />
+
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/support_icone"
+        android:title="@string/support" />
+
+    <item
+        android:id="@+id/nav_dark_mode"
+        android:icon="@drawable/theme_icone"
+        android:title="@string/theme"
+        android:visible="false"
+        />
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/about_icone"
+        android:title="@string/about" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/logout_icone"
+        android:title="@string/logout" />
+</menu>
